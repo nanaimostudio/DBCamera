@@ -53,7 +53,8 @@ static const CGSize kFilterCellSize = { 75, 90 };
     if (self) {
         // Custom initialization
         _cropArray = @[ @320, @213, @240, @192, @180 ];
-        _filtersList = @[ @"normal", @"1977", @"amaro", @"grey", @"hudson", @"mayfair", @"nashville", @"valencia" ];
+//        _filtersList = @[ @"normal", @"1977", @"amaro", @"grey", @"hudson", @"mayfair", @"nashville", @"valencia" ];
+        _filtersList = @[];
         _filterMapping = @{ @0:[[GPUImageFilter alloc] init], @1:[[GPUImageToneCurveFilter alloc] initWithACV:@"1977"],
                             @2:[[GPUImageToneCurveFilter alloc] initWithACV:@"amaro"], @3:[[GPUImageGrayscaleFilter alloc] init],
                             @4:[[GPUImageToneCurveFilter alloc] initWithACV:@"Hudson"], @5:[[GPUImageToneCurveFilter alloc] initWithACV:@"mayfair"],
@@ -217,8 +218,8 @@ static const CGSize kFilterCellSize = { 75, 90 };
         [_navigationBar setUserInteractionEnabled:YES];
         [_navigationBar addSubview:self.useButton];
         [_navigationBar addSubview:self.retakeButton];
-        if ( !_forceQuadCrop )
-            [_navigationBar addSubview:self.cropButton];
+//        if ( !_forceQuadCrop )
+//            [_navigationBar addSubview:self.cropButton];
     }
     
     return _navigationBar;

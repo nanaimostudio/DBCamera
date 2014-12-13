@@ -88,7 +88,7 @@
     [self addSubview:self.topContainerBar];
     [self addSubview:self.bottomContainerBar];
 
-    [self.topContainerBar addSubview:self.cameraButton];
+//    [self.topContainerBar addSubview:self.cameraButton];
     [self.topContainerBar addSubview:self.flashButton];
     [self.topContainerBar addSubview:self.gridButton];
 
