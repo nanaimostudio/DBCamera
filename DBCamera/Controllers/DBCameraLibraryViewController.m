@@ -263,7 +263,7 @@ NSLocalizedStringFromTable(key, @"DBCamera", nil)
         _titleLabel = [[UILabel alloc] initWithFrame:(CGRect){ CGRectGetMaxX(closeButton.frame), 0, CGRectGetWidth(self.view.bounds) - (CGRectGetWidth(closeButton.bounds) * 2), CGRectGetHeight(_topContainerBar.bounds) }];
         [_titleLabel setBackgroundColor:[UIColor clearColor]];
         [_titleLabel setTextColor:self.tintColor];
-        [_titleLabel setFont:[UIFont systemFontOfSize:12]];
+        [_titleLabel setFont:[UIFont fontWithName:@"Avenir-Roman" size:14.0f]];
         [_titleLabel setTextAlignment:NSTextAlignmentCenter];
         [_topContainerBar addSubview:_titleLabel];
     }
