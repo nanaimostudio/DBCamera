@@ -250,6 +250,7 @@ static const CGSize kFilterCellSize = { 75, 90 };
     if ( !_useButton ) {
         _useButton = [self baseButton];
         [_useButton setTitle:[DBCameraLocalizedStrings(@"button.use") uppercaseString] forState:UIControlStateNormal];
+        _useButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Roman" size:14.0f];
         [_useButton.titleLabel sizeToFit];
         [_useButton sizeToFit];
         [_useButton setFrame:(CGRect){ CGRectGetWidth(self.view.frame) - (CGRectGetWidth(_useButton.frame) + buttonMargin), 0, CGRectGetWidth(_useButton.frame) + buttonMargin, 60 }];
@@ -264,6 +265,7 @@ static const CGSize kFilterCellSize = { 75, 90 };
     if ( !_retakeButton ) {
         _retakeButton = [self baseButton];
         [_retakeButton setTitle:[DBCameraLocalizedStrings(@"button.retake") uppercaseString] forState:UIControlStateNormal];
+        _retakeButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Roman" size:14.0f];
         [_retakeButton.titleLabel sizeToFit];
         [_retakeButton sizeToFit];
         [_retakeButton setFrame:(CGRect){ 0, 0, CGRectGetWidth(_retakeButton.frame) + buttonMargin, 60 }];
@@ -278,6 +280,7 @@ static const CGSize kFilterCellSize = { 75, 90 };
     if ( !_cropButton) {
         _cropButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_cropButton setBackgroundColor:[UIColor clearColor]];
+        _cropButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Roman" size:14.0f];
         [_cropButton setImage:[[UIImage imageNamed:@"Crop"] tintImageWithColor:self.tintColor] forState:UIControlStateNormal];
         [_cropButton setImage:[[UIImage imageNamed:@"Crop"] tintImageWithColor:self.selectedTintColor] forState:UIControlStateSelected];
         [_cropButton setFrame:(CGRect){ CGRectGetMidX(self.view.bounds) - 15, 15, 30, 30 }];
@@ -290,6 +293,7 @@ static const CGSize kFilterCellSize = { 75, 90 };
 - (UIButton *) baseButton
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.titleLabel.font = [UIFont fontWithName:@"Avenir-Roman" size:14.0f];
     [button setBackgroundColor:[UIColor clearColor]];
     [button setTitleColor:self.tintColor forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:12];
